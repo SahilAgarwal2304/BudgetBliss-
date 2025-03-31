@@ -76,8 +76,8 @@ button:hover {
 
 .sidebar-logo {
    position: fixed;
-   top: 0px;
-   left: 20px;
+   top: 30px;
+   left: 0px;
    transform: none;
    width: 200px;
    height: auto;
