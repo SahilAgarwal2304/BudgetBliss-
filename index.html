@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker - Dashboard</title>
+    <link rel="stylesheet" href="frontend/assets/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="frontend/assets/images/sidebar-logo.png" alt="Sidebar Toggle" class="sidebar-logo" onclick="toggleSidebar()">
+        </header>
+        <div class="sidebar">
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="frontend/pages/add-expense.html">Add Expense</a></li>
+                <li><a href="frontend/pages/view-expenses.html">View Expenses</a></li>
+                <li><a href="frontend/pages/set-budget.html">Set Budget</a></li>
+                <li><a href="frontend/pages/add-money.html">Add Money</a></li>
+                <li><a href="frontend/pages/charts.html">Expense Chart</a></li>
+            </ul>
+        </div>
+        <main class="content">
+            <section class="section-box">
+                <h1>Budget Remaining</h1>
+                <p>Yearly: ₹<span id="yearlyBudgetDisplay">0</span></p>
+                <p>Monthly: ₹<span id="monthlyBudgetDisplay">0</span></p>
+                <p>Weekly: ₹<span id="weeklyBudgetDisplay">0</span></p>
+                <p>Daily: ₹<span id="dailyBudgetDisplay">0</span></p>
+            </section>
+            <section class="section-box">
+                <h1>Savings</h1>
+                <p>Savings: ₹<span id="savingsAmount">0</span></p>
+            </section>
+            <section class="section-box">
+                <h1>Account Balance</h1>
+                <p>Balance: ₹<span id="balanceAmount">0</span></p>
+            </section>
+            <section class="section-box">
+                <h2>Recent Transactions</h2>
+                <ul id="expenseList"></ul>
+                <p>Total Spending: ₹<span id="totalSpending">0</span></p>
+            </section>
+        </main>
+        <img src="frontend/assets/images/dashboard-logo.png" alt="Dashboard" class="dashboard-logo" onclick="window.location.href='index.html'">
+    </div>
+    <div class="tabs">
+        <button onclick="window.location.href='index.html'">Dashboard</button>
+        <button onclick="window.location.href='frontend/pages/add-expense.html'">Add Expense</button>
+        <button onclick="window.location.href='frontend/pages/view-expenses.html'">View Expenses</button>
+        <button onclick="window.location.href='frontend/pages/set-budget.html'">Set Budget</button>
+        <button onclick="window.location.href='frontend/pages/add-money.html'">Add Money</button>
+        <button onclick="window.location.href='frontend/pages/charts.html'">Charts</button>
+    </div>
+    <script src="frontend/assets/app.js"></script>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            const content = document.querySelector('.content');
+            if (sidebar.style.width === '200px' || sidebar.style.width === '') {
+                sidebar.style.width = '0';
+                content.style.marginLeft = '0';
+            } else {
+                sidebar.style.width = '200px';
+                content.style.marginLeft = '200px';
+            }
+        }
+    </script>
+</body>
+</html>
