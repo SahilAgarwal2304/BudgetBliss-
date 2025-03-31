@@ -1,0 +1,216 @@
+/* frontend/assets/styles.css */
+
+/* General Styles */
+body {
+   font-family: 'Arial', sans-serif;
+   background: #121826;
+   color: #E0E0E0;
+   margin: 0;
+   padding: 0;
+}
+
+.container {
+   width: 80%;
+   max-width: 1000px;
+   background: #1A202C;
+   padding: 20px;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+   border-radius: 12px;
+   margin: 20px auto;
+}
+
+.section-box {
+   background: #2D3748;
+   padding: 20px 30px;
+   border-radius: 10px;
+   margin-top: 20px;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+   text-align: center;
+}
+
+.section-box h1,
+.section-box h2 {
+   color: #4A90E2;
+}
+
+section-box p, section-box span {
+   text-align: center;
+}
+
+.form-section,
+.filter-section {
+   background: #2D3748;
+   padding: 20px;
+   border-radius: 10px;
+   margin-top: 20px;
+}
+
+.input-group select,
+.input-group input,
+.filter-section select {
+   width: calc(100% - 22px);
+   height: 45px;
+   padding: 10px;
+   border-radius: 8px;
+   font-size: 16px;
+   background: #1A202C;
+   border: 1px solid #4A90E2;
+   color: #E0E0E0;
+}
+
+button {
+   width: calc(100% - 22px);
+   height: 45px;
+   background-color: #4A90E2;
+   color: white;
+   font-weight: bold;
+   cursor: pointer;
+   border: none;
+   border-radius: 8px;
+   font-size: 16px;
+}
+
+button:hover {
+   background-color: #2868A8;
+}
+
+.sidebar-logo {
+   position: fixed;
+   top: 20px;
+   left: 20px;
+   transform: none;
+   width: 70px;
+   height: auto;
+   z-index: 1001;
+}
+
+/* Hide Sidebar Logo on Mobile */
+@media screen and (max-width: 700px) {
+   .sidebar-logo {
+       display: none;
+   }
+}
+
+.dashboard-logo {
+   position: fixed;
+   bottom: 20px;
+   right: 20px;
+   transform: none;
+   width: 50px;
+   height: auto;
+   z-index: 1001;
+}
+
+/* Sidebar Styles (Desktop) */
+.sidebar {
+   position: fixed;
+   top: 80px;
+   left: 0;
+   width: 200px;
+   height: calc(100% - 80px);
+   background-color: #1A202C;
+   overflow-y: auto;
+   padding-top: 20px;
+   box-shadow: 4px 0 8px rgba(0, 0, 0, 0.5);
+   z-index: 1000;
+   border-right: 1px solid #333;
+   border-top-right-radius: 10px;
+   border-bottom-right-radius: 10px;
+}
+
+.sidebar ul {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+}
+
+.sidebar li {
+   padding: 15px 15px;
+   border-left: 3px solid #4A90E2;
+   margin-bottom: 5px;
+}
+
+.sidebar li a {
+   color: #E0E0E0;
+   text-decoration: none;
+   display: block;
+}
+
+.sidebar li a:hover {
+   background-color: #333;
+}
+
+.sidebar li.blue-1 {
+   border-left-color: #4A90E2;
+}
+
+.sidebar li.blue-2 {
+   border-left-color: #2962FF;
+}
+
+.sidebar li.blue-3 {
+   border-left-color: #00B0FF;
+}
+
+.sidebar li.blue-4 {
+   border-left-color: #2979FF;
+}
+
+.sidebar li.blue-5 {
+   border-left-color: #1E88E5;
+}
+
+sidebar li.blue-6 {
+   border-left-color: #1976D2;
+}
+
+.content {
+   margin-left: 200px;
+   padding: 20px;
+}
+
+/* Bottom Tabs Styles (Mobile Only) */
+@media screen and (max-width: 700px) {
+   .tabs {
+       display: flex;
+       justify-content: space-around;
+       position: fixed;
+       bottom: 0;
+       left: 0;
+       width: 100%;
+       transform: none;
+       background-color: #4A90E2;
+       padding: 10px 0;
+   }
+
+   .tabs button {
+       flex-grow: 1;
+       background-color: transparent;
+       border: none;
+       color: #fff;
+       font-size: 14px;
+       cursor: pointer;
+       padding: 10px;
+   }
+
+   .tabs button:hover {
+       background-color: #2868A8;
+   }
+
+   /* Hide Sidebar on Mobile */
+   .sidebar {
+       display: none;
+   }
+
+   .content {
+       margin-left: 0;
+       padding-top: 70px;
+   }
+}
+
+/* Hide Tabs on Desktop */
+@media screen and (min-width: 701px) {
+   .tabs {
+       display: none;
+   }
+}

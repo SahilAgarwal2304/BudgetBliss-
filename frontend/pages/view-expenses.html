@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Expenses</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="../assets/images/sidebar-logo.png" alt="Sidebar Toggle" class="sidebar-logo" onclick="toggleSidebar()" />
+        </header>
+        <div class="sidebar">
+            <ul>
+                <li><a href="../../index.html">Dashboard</a></li>
+                <li><a href="add-expense.html">Add Expense</a></li>
+                <li><a href="view-expenses.html">View Expenses</a></li>
+                <li><a href="set-budget.html">Set Budget</a></li>
+                <li><a href="add-money.html">Add Money</a></li>
+                <li><a href="charts.html">Expense Chart</a></li>
+            </ul>
+        </div>
+        <main class="content">
+            <section class="balance-section">
+                <h2>Balance</h2>
+                <p>Daily Balance: ₹<span id="dailyBalance">0</span></p>
+                <p>Weekly Balance: ₹<span id="weeklyBalance">0</span></p>
+                <p>Monthly Balance: ₹<span id="monthlyBalance">0</span></p>
+            </section>
+            <section class="section-box">
+                <h2>Expense List</h2>
+                <ul id="expenseList"></ul>
+                <p>Total Spending: ₹<span id="totalSpending">0</span></p>
+            </section>
+            <section class="filter-section">
+                <h2>Filter Expenses</h2>
+                <div class="input-group">
+                    <label for="filterCategory">Category:</label>
+                    <select id="filterCategory">
+                        <option value="All Categories">All Categories</option>
+                    </select>
+                </div>
+            </section>
+            <img src="../assets/images/dashboard-logo.png" alt="Dashboard" class="dashboard-logo" onclick="window.location.href='../../index.html'" />
+            <div class="tabs">
+                <button onclick="window.location.href='../../index.html'">Dashboard</button>
+                <button onclick="window.location.href='add-expense.html'">Add Expense</button>
+                <button onclick="window.location.href='view-expenses.html'">View Expenses</button>
+                <button onclick="window.location.href='set-budget.html'">Set Budget</button>
+                <button onclick="window.location.href='add-money.html'">Add Money</button>
+                <button onclick="window.location.href='charts.html'">Charts</button>
+            </div>
+        </main>
+    </div>
+    <script src="../assets/app.js"></script>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = sidebar.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
