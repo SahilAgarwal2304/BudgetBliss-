@@ -13,7 +13,7 @@
     <li><strong>Goal Setting:</strong> Set savings goals and track progress.</li>
     <li><strong>Expense History:</strong> View past transactions with category-wise breakdowns.</li>
     <li><strong>Real-time Alerts:</strong> Get notified when nearing or exceeding budget limits.</li>
-    <li><strong>User-friendly Dashboard:</strong> Visualize spending trends for better financial management.</li>
+    <li><strong>User-friendly Dashboard:</strong> Visualize spending trends for better financial management. </li>
 </ul>
 <hr>
 <h2>Tech Stack</h2>
